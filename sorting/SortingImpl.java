@@ -34,14 +34,48 @@ public class SortingImpl implements ISorting {
 
 	@Override
 	public int[] b_sort(int[] num) {
-		// TODO Auto-generated method stub
-		return null;
+      /*	  TODO Auto-generated method stub
+       *冒泡排序
+       */		
+		for(int i=1;i<num.length;i++){
+			boolean flag=true;
+			for(int j=0;j<num.length-i;j++){
+				if(num[j]>num[j+1]){
+					flag=false;
+					int temp=num[j];
+					num[j]=num[j+1];
+					num[j+1]=temp;
+				}
+			}
+			//如果在某一轮比较中未发现num[j] > num[j + 1]的情况则表示该序列已经有序了，则不需要继续排序了
+		   if(flag){
+			   break;
+		   }
+		}
+		return num;
 	}
 
 	@Override
 	public int[] c_sort(int[] num) {
-		// TODO Auto-generated method stub
-		return null;
+		/* TODO Auto-generated method stub
+		 * 选择排序
+*/		
+		int minIndex=0;
+		int temp=0;
+		for(int i=0;i<num.length-1;i++){
+			minIndex=i;
+			for(int j=i+1;j<num.length;j++){
+				if(num[minIndex]>num[j]){
+					minIndex=j;
+				}
+			}
+				if(minIndex!=i){
+					temp=num[minIndex];
+					num[minIndex]=num[i];
+					num[i]=temp;
+				}
+			}
+		return num;
 	}
 
 }
