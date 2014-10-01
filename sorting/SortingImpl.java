@@ -5,25 +5,24 @@ public class SortingImpl implements ISorting {
 	@Override
 	public int a_sort(int[] num, int dest) {
 		/* TODO Auto-generated method stub
-		 * ¶ş·Ö²éÕÒ£¬Ç°ÌáÊÇÒÔÅÅĞòµÄÊı×é
-		 * ²éÕÒµ½·µ»ØÊı×éÏÂ±ê£¬·ñÔò·µ»Ø-1
+		 * 2åˆ†æŸ¥æ‰¾ï¼Œå‰æå·²æ’åº
 */		
 		int low=0;
 		int high=num.length;
 		int xiabiao=-1;
 		while(low<=high){
 			int middle=(low+high)/2;
-			//ÕÒµ½
+			//æ‰¾åˆ°
 			if(num[middle]==dest){
 			  xiabiao=middle;
 			  break;
 			}
-			//ÔÚ×ó±ß
+			//åœ¨å·¦è¾¹
 			if(num[middle]>dest){
 	          high=middle-1;
 	          continue;
 			}
-			//ÔÚÓÒ±ß
+			//åœ¨å³è¾¹
 			if(num[middle]<dest){
 				low=middle+1;
 				continue;
@@ -35,7 +34,7 @@ public class SortingImpl implements ISorting {
 	@Override
 	public int[] b_sort(int[] num) {
       /*	  TODO Auto-generated method stub
-       *Ã°ÅİÅÅĞò
+       *å†’æ³¡æ’åº
        */		
 		for(int i=1;i<num.length;i++){
 			boolean flag=true;
@@ -47,7 +46,6 @@ public class SortingImpl implements ISorting {
 					num[j+1]=temp;
 				}
 			}
-			//Èç¹ûÔÚÄ³Ò»ÂÖ±È½ÏÖĞÎ´·¢ÏÖnum[j] > num[j + 1]µÄÇé¿öÔò±íÊ¾¸ÃĞòÁĞÒÑ¾­ÓĞĞòÁË£¬Ôò²»ĞèÒª¼ÌĞøÅÅĞòÁË
 		   if(flag){
 			   break;
 		   }
@@ -58,7 +56,7 @@ public class SortingImpl implements ISorting {
 	@Override
 	public int[] c_sort(int[] num) {
 		/* TODO Auto-generated method stub
-		 * Ñ¡ÔñÅÅĞò
+		 * é€‰æ‹©æ’åº
 */		
 		int minIndex=0;
 		int temp=0;

@@ -9,11 +9,11 @@ public class sortTest {
 		// TODO Auto-generated method stub
        int[] num={9,8,10,28,4,74,65,98,11,44,33,99};
        ISorting isoring=new SortingImpl();
-//       num=isoring.b_sort(num);// Ã°ÅİÅÅĞò²âÊÔ
-/*       num=isoring.c_sort(num);  // Ñ¡ÔñÅÅĞò²âÊÔ
+//       num=isoring.b_sort(num);// å†’æ³¡æ’åºæµ‹è¯•
+/*       num=isoring.c_sort(num);  // é€‰æ‹©æ’åºæµ‹è¯•
         for(int i=0;i<num.length;i++){
         System.out.print(num[i]+" ");*/
-        if(isoring.a_sort(num, 17)!=-1)
+        if(isoring.a_sort(num, 17)!=-1) //2åˆ†æŸ¥æ‰¾æµ‹è¯•
         	System.out.print("has this dest");
         else System.out.print("has not this deskt");
         

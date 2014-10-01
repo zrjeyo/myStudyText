@@ -1,10 +1,10 @@
 package sorting;
 
 public interface ISorting {
-	public  int a_sort(int[] num,int dest);//¶ş·Ö²éÕÒ
+	public  int a_sort(int[] num,int dest);//2åˆ†æŸ¥æ‰¾
 	
-	public int[]  b_sort(int[] num);//Ã°ÅİÅÅĞò
+	public int[]  b_sort(int[] num);//å†’æ³¡æ’åº
 	
-	public int[] c_sort(int[] num);//Ñ¡ÔñÅÅĞò
+	public int[] c_sort(int[] num);//é€‰æ‹©æ’åº
 	
 }
