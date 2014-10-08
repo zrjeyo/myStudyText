@@ -76,4 +76,18 @@ public class SortingImpl implements ISorting {
 		return num;
 	}
 
+	@Override
+	public int[] d_sort(int[] num) {
+		// TODO Auto-generated method stub
+		for(int i=1;i<num.length;i++){
+			int temp=num[i];
+			int j=i-1;
+			for(;j>=0&&temp<num[j];j--){  //后移
+				num[j+1]=num[j];
+			}
+			num[j+1]=temp;
+		}
+		return num;
+	}
+
 }
