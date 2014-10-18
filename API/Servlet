@@ -1,0 +1,32 @@
+Servlet的生命周期 
+ 1)加载和类实例化：自定义Servlet extends HttpServlet
+   在以下情况下触发第1）步
+    a. web.XML中有<load-on-startup>1</load-on-startup>中配置Servlet加载类
+    b. 第一次访问请求某个Servlet时
+    c. Servlet类文件被更新将重加载该类
+    
+   在客户端发出请求后，Servlet容器解析URL并找到对应的Servlet类加载，并创建一个实例
+   
+ 2)实例的初始化 init（）
+   调用init()初始化该实例，目的是为处理请求前完成一些工作，如数据库连接，获取配置信息；
+   init()方法只执行一次，因为当第一次实例Servlet并完成service时，该实例不会被destroy而是被保存在内存中；
+   （Servlet是采用多线程执行的）
+ 
+ 3)service服务阶段
+   匹配请求方法为get，则dogGet(HttpServletRequest Request，HttpServletResponse Response){doPost(Request，Response)；}
+               为post，则doPost(HttpServletRequest Request，HttpServletResponse Response){}； 
+               
+ 4)destroy()
+   在以下情况下触发第4）步
+   a）Servlet容器停止或重新启动；
+   
+   
+完整过程：
+ 1.客户端向Servlet容器发送请求
+ 2.Servlet容器接受请求
+ 3.Servlet容器创建一个HttpRequst对象，并把客户端请求信息封装到这个对象
+ 4.Servlet容器创建一个HttpResponse对象
+ 5.Servlet容器调用HttpServlet对象的service方法，把HttpRequst和HttpResponse对象作为参数传给HttpServlet对象
+ 6.HttpServlet调用HttpRequest对象方法获取请求信息
+ 7.HttpServlet调用HttpResponse对象方法生成相应信息
+ 8.Servlet容器将HttpServlet的响应结果传给客户端

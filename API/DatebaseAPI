@@ -1,0 +1,37 @@
+搜索查询：
+    WHERE id BETWEEN 1 AND 10 范围
+    WHERE id NOT BETWEEN 1 AND 10
+    WHERE name LIKE'王' 相似
+    SELECT uid,sum(uid) FROM users group by uid ORDER BY uid desc 分组求和
+    avg(uid)
+    max(uid)
+    min(uid)
+    SELECT * FROM TABLE WHERE id=?;
+    SELECT id FROM TABLE WHERE name='?';
+  连接查询：
+   内连接(过滤的笛卡尔积) SELECT * FROM TABLE1 t1 INNER JOIN TABLE2 t2 ON t1.uid=t2.uid WHERE t2.name='?';
+   交叉连接(笛卡尔积) SELECT * FROM TABLE1,TABLE2  
+   外连接 左连接 SELECT * FROM TABLE1 t1 LEFT JOIN TABLE2 t2 ON t1.id=t2.id 此外列出左边没匹配到的记录   
+          右连接 SELECT * FROM TABLE1 t1 RIGHT JOIN TABLE2 t2 ON t1.id=t2.id 此外列出右边边没匹配到的记录
+          全连接 SELECT * FROM TABLE1 t1 FULL JOIN TABLE2 t2 ON t1.id=t2.id 此外列出左右边没匹配到的记录
+
+插入记录语句：
+    INSERT INTO TEBLE1 VALUES('?','?','?');
+    INSERT INTO account(alogin,apass) VALUES('zrjeyo1','123')
+    
+更新记录语句:
+    UPDATE category SET ctype=?,chot=? WHERE cid=?
+
+删除语记录句：
+    DELETE FROM category WHERE cid=?
+    
+删除表：
+    DROP TABLE 表名
+    
+建立表：
+    CREATE TABLE 表名（
+    Sno char(9) primary key,
+    Sname char(20),
+    Ssex char(2),
+    Sage smallint
+    ）     

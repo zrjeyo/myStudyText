@@ -28,7 +28,7 @@ public class HeapSortImpl implements IHeapSort {
 	public void buildHeap(int[] A) {
 		// TODO Auto-generated method stub
 		heapSize=A.length;
-        for(int i=heapSize;i>=1;i--){
+        for(int i=heapSize/2;i>=1;i--){
         	heapify(A,i);
         }
 	}
@@ -49,13 +49,14 @@ public class HeapSortImpl implements IHeapSort {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-          int[] a=new int[10000];
-          for(int i=10000,j=0;i>0;i--,j++)
+          int[] a=new int[100];
+          for(int i=100,j=0;i>0;i--,j++)
         	  a[j]=i;
-          long pre=System.currentTimeMillis();
+//          long pre=System.currentTimeMillis();
           IHeapSort heapSorImpl=new HeapSortImpl();
           heapSorImpl.heapSort(a);
-          long post=System.currentTimeMillis();
-        		 System.out.println(post-pre);
+//          long post=System.currentTimeMillis();
+        	for(int i:a)	 
+          System.out.println(i);
           }
 }
