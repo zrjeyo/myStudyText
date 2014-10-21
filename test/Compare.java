@@ -10,7 +10,7 @@ public class Compare {
 			return --temp;
 		}
 		for(int i=0;i<one.length&&temp==0;i++){
-			if(one[i]!=two[i]&&(one[i]+32)!=two[i]&&(one[i]-32)!=two[i]){  //忽略大小写
+			if(one[i]!=two[i]&&(one[i]+32)!=two[i]&&(one[i]-32)!=two[i]){  
 			 temp--;
 			 break;
 			}
@@ -23,8 +23,7 @@ public class Compare {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-     Compare compare=new Compare();
-     System.out.print(compare.compareString("shi", "Shi"));
+     System.out.print("hello world");
 	}
 
 }

@@ -29,14 +29,5 @@ public class HuiWenShu {
 		}
 		return max;
 	}
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-      String s="dfjhejs";
-      HuiWenShu hws=new HuiWenShu();
-      System.out.println(hws.getMaxH(s));
-	}
 
 }
