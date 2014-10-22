@@ -1,5 +1,7 @@
 package test;
-
+/*
+ * 比较2个字符串是否相同
+*/
 public class Compare {
 	public int compareString(String A,String B){
 		char[] one=A.toCharArray();

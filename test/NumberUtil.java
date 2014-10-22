@@ -4,6 +4,7 @@ public class NumberUtil {
 
 	/**
 	 * @param args
+	 * 小数的四舍五入
 	 */
 	public void roundNumber(double numberToRound){
 		DecimalFormat df=new DecimalFormat("0.00");

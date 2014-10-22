@@ -1,5 +1,8 @@
 package test;
-
+/*
+ * 计算一串字符串的最长回文数
+ * 例如 rosoos 最长回文数为soos 长度为4
+*/
 public class HuiWenShu {
 	public boolean isHuiWenShu(String s){
 		//判断一个字符串是否回文数
